@@ -14,6 +14,6 @@ script:
   - python tests.py
 
 after_success:
-  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD" registry.cn-hangzhou.aliyuncs.com;
-  - docker build -t registry.cn-hangzhou.aliyuncs.com/mkdef/flask:$TRAVIS_BRANCH-$TRAVIS_BUILD_ID . 
-  - docker push registry.cn-hangzhou.aliyuncs.com/mkdef/flask:$TRAVIS_BRANCH-$TRAVIS_BUILD_ID;
+  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - docker build -t shaobol/flask:$TRAVIS_BRANCH-$TRAVIS_BUILD_ID . 
+  - docker push shaobol/flask:$TRAVIS_BRANCH-$TRAVIS_BUILD_ID;
