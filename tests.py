@@ -4,10 +4,9 @@ import unittest
 class FlaskTestCase(unittest.TestCase):
     def setUp(self):
         self.app = app.app.test_client()
-        print 'setUp'
 
     def tearDown(self):
-        print 'tearDown'
+    	pass
 
     def test_index(self):
         rv = self.app.get('/')
@@ -15,4 +14,9 @@ class FlaskTestCase(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+
+
+
 
